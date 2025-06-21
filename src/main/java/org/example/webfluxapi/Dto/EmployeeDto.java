@@ -1,17 +1,24 @@
 package org.example.webfluxapi.Dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
 public class EmployeeDto {
-    private String Id;
-    private String FirstName;
-    private String LastName;
+    private String id;
+    private String firstName;
+    private String lastName;
     private String email;
+
+    public EmployeeDto(String id, String firstName, String lastName, String email) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+    public String getId() { return id; }
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getEmail() { return email; }
+
+    // constructor vacío y completo, si no usas Lombok
 }

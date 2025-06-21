@@ -1,22 +1,44 @@
 package org.example.webfluxapi.Entity;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Getter
-@Setter
+
 @NoArgsConstructor
-@AllArgsConstructor
-@Document(collation = "employees")
+@Document(collection = "employees")
 public class Employee {
     @Id
     private String id;
-    private String FirstName;
-    private String LastName;
-    private String Email;
+    private String firstName;
+    private String lastName;
+    private String email;
+
+    public Employee(String id, String firstName, String lastName, String email) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+    public String setFirstName(String firstName) {
+        this.firstName = firstName;
+        return firstName;
+    }
+    public String setLastName(String lastName) {
+        this.lastName = lastName;
+        return lastName;
+    }
+    public String setEmail(String email) {
+        this.email = email;
+        return email;
+    }
+
+    public String getId() { return id; }
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getEmail() { return email; }
+
 }
+
