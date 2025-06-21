@@ -4,7 +4,7 @@ import org.example.webfluxapi.Dto.EmployeeDto;
 import org.example.webfluxapi.Entity.Employee;
 
 public class EmployeeMapper {
-
+    // Map
     public static EmployeeDto mapToEmployeeDto(Employee employee){
         return new EmployeeDto(
                 employee.getId(),
