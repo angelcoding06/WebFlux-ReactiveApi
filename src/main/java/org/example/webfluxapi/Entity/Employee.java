@@ -14,7 +14,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @Document(collation = "employees")
 public class Employee {
-
     @Id
     private String id;
     private String FirstName;
